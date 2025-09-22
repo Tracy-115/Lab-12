@@ -7,3 +7,17 @@
 #include <algorithm>
 using namespace std;
 
+int main(){
+array<int, 31>numbers{};
+ifstream infile("Array_File.txt");
+if (!infile){
+  cerr << "Error" << endl;
+}
+
+for (int i =0; i<30 ; i++){
+  infile >> numbers[i];
+}
+infile.close();
+
+cout << "With gathered numbers, we will find the Max, Min, Medium, and Mean numbers!" << endl;
+
