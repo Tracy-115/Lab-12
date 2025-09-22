@@ -28,7 +28,7 @@ cout << "Sum: " << accumulate(numbers.begin(), numbers.end(), 0) << endl;
 int num;
 cout << "What is the position of the value you wish to see from the list(1-30): ";
 cin >> num;
-cout << "In position " << num << " the number is " << numbers.at(num+1) << endl;
+cout << "In position " << num << " the number is " << numbers.at(num-1) << endl;
 
 sort(numbers.begin(), numbers.end());
 cout << "Sorted list: ";
