@@ -5,6 +5,7 @@
 #include <fstream>
 #include <array>
 #include <algorithm>
+#include <numeric>
 using namespace std;
 
 int main(){
@@ -20,10 +21,17 @@ for (int i =0; i<30 ; i++){
 infile.close();
 
 cout << "With gathered numbers, we will find the Max, Min, and Mean numbers!" << endl;
-cout << "Maximum Number found: " << *max_elemenet(Array_File.begin(), Array_File.end()) << endl;
-cout << "Minimum Number found: " << *min_elemenet(Array_File.begin(), Array_File.end()) << endl;
-cout << "Average of all numbers: " << accumulate(Array_File.begin(), Array_File.end()) << endl;
+cout << "Max: " << *max_element(numbers.begin(), numbers.end()) << endl;
+cout << "Min: " << *min_element(numbers.begin(), numbers.end()) << endl;
+cout << "Sum: " << accumulate(numbers.begin(), numbers.end(), 0) << endl;
 
-cout << "The numbers will be listed in order" << endl;
+sort(numbers.begin(), numbers.end());
+cout << "Sorted list: ";
+    for (double val : numbers) cout << val << " "; cout << endl;
+    sort(numbers.rbegin(), numbers.rend());
+
+return 0;
+}
+
 
 
