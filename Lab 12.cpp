@@ -19,7 +19,7 @@ for (int i =0; i<30 ; i++){
   infile >> numbers[i];//reads the numbers from the file
 }
 infile.close();
-
+cout << "This is a gathered data for Grades of the 30 students in the school" << endl;
 cout << "With gathered numbers, we will find the Max, Min, and Mean numbers!" << endl;
 cout << "Max: " << *max_element(numbers.begin(), numbers.end()) << endl; //finds the max number
 cout << "Min: " << *min_element(numbers.begin(), numbers.end()) << endl; //finds the min number
