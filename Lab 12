@@ -25,10 +25,18 @@ cout << "Max: " << *max_element(numbers.begin(), numbers.end()) << endl;
 cout << "Min: " << *min_element(numbers.begin(), numbers.end()) << endl;
 cout << "Sum: " << accumulate(numbers.begin(), numbers.end(), 0) << endl;
 
+int num;
+cout << "What is the position of the value you wish to see from the list(1-30): ";
+cin >> num;
+cout << "In position " << num << " the number is " << numbers.at(num+1) << endl;
+
 sort(numbers.begin(), numbers.end());
 cout << "Sorted list: ";
-    for (double val : numbers) cout << val << " "; cout << endl;
-    sort(numbers.rbegin(), numbers.rend());
+for (double val : numbers) cout << val << " "; cout << endl;
+sort(numbers.rbegin(), numbers.rend());
+cout << "Reversed list: ";
+for (double val : numbers) cout << val << " ";
+cout << endl;
 
 return 0;
 }
